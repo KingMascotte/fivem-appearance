@@ -1,4 +1,6 @@
 -- Function that gets the identifier. We need this to identify the player on the DB
+-- Taken from es_extended
+
 GetIdentifier = function(source)
 		for k,v in ipairs(GetPlayerIdentifiers(source)) do
 			if string.match(v, 'license:') then
@@ -18,6 +20,15 @@ function GetCharSkin(source)
 
 	return charappearance
 end
+
+-- Event to pass retrieved data to the client
+
+RegisterNetEvent('getcharacterclothes')
+AddEventHandler('getcharacterclothes', function()
+    local source = source
+  local charappearance  = GetCharSkin(source)
+    TriggerClientEvent('player:loadcharacterclothes', source, charappearance)
+end)
 
 -- Event thats triggered to save the outfit
 
