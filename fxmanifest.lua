@@ -6,7 +6,15 @@ description 'A flexible player customization script for FiveM.'
 repository 'https://github.com/snakewiz/fivem-appearance'
 version '1.2.0'
 
-client_script 'typescript/build/client.js'
+client_scripts { 
+  
+  'typescript/build/client.js',
+  'client.lua'
+  }
+
+server_script 'server.lua'
+  
+ 
 
 files {
   'ui/build/index.html',
