@@ -1,5 +1,5 @@
 -- Function that loads the saved outfit. You should probably trigger this event
--- from the playerSpawned event handler
+-- from the playerSpawned event handler using the 'getcharacterclothes' server event
 
 RegisterNetEvent('player:loadcharacterclothes')
 AddEventHandler('player:loadcharacterclothes', function(source, charappearance)
