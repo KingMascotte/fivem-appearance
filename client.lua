@@ -3,7 +3,6 @@
 
 RegisterNetEvent('player:loadcharacterclothes')
 AddEventHandler('player:loadcharacterclothes', function(source, charappearance)
-  print('and here')
   local appearance = charappearance
   exports["fivem-appearance"]:setPlayerAppearance(appearance)
   print('Loaded clothes')
